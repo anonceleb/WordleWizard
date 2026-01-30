@@ -1,0 +1,8 @@
+{
+  "short_description": "Unofficial helper for Wordle-style games — suggests optimal next guesses and shows short definitions.",
+  "full_description": "Wordle Wizard (Unofficial) helps you make better guesses in Wordle-style puzzles. It detects your attempts in-game, tracks feedback, and suggests the next optimal guess using deterministic solver logic. No account or network tracking is required — the solver and word lists run locally. Includes an optional meanings database for short definitions of suggested words.",
+  "privacy_summary": "No personal data is collected. The extension stores bundled resources locally and does not send gameplay or user data to external servers.",
+  "support_email": "your-email@example.com",
+  "homepage_url": "https://github.com/ashwin/Wordle-Solver",
+  "screenshots": ["screenshot-panel-open.png", "screenshot-top-suggestion.png", "screenshot-validated-row.png", "screenshot-winning.png"]
+}

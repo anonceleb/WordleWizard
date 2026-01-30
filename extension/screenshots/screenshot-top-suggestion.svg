@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#f4f6f8"/>
+  <g transform="translate(280,160)">
+    <rect width="720" height="480" rx="12" ry="12" fill="#ffffff" stroke="#e6eef8" stroke-width="1" />
+    <text x="22" y="42" font-family="-apple-system" font-size="20" fill="#0b66b2">Wordle Wizard</text>
+
+    <g transform="translate(22,72)">
+      <rect x="0" y="0" width="210" height="64" rx="12" ry="12" fill="#fff" stroke="#eef6ff" />
+      <text x="105" y="42" font-family="-apple-system" font-size="44" fill="#111" font-weight="800" text-anchor="middle">SCRAP</text>
+
+      <g transform="translate(240,6)">
+        <text x="0" y="22" font-family="-apple-system" font-size="15" fill="#333">a small fragment of something broken off from the whole</text>
+      </g>
+    </g>
+
+    <g transform="translate(24,160)">
+      <circle cx="18" cy="18" r="14" fill="#6aaa64" />
+      <text x="44" y="24" font-family="-apple-system" font-size="13" fill="#111">Validated suggestion — click to accept</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "wordle-wizard-screenshots",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "generate": "node generate_screenshots.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

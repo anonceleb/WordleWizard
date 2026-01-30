@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — Wordle Wizard (Unofficial)</title>
+  <style>
+    body{font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;color:#111;margin:32px;max-width:780px}
+    header{border-bottom:1px solid #eee;padding-bottom:12px;margin-bottom:18px}
+    h1{color:#0b66b2}
+    pre{background:#f6f8fb;padding:12px;border-radius:6px}
+    a{color:#0b66b2}
+    footer{margin-top:28px;color:#666;font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy — Wordle Wizard (Unofficial)</h1>
+    <div>Last updated: 2026-01-28</div>
+  </header>
+
+  <section>
+    <p><strong>Summary</strong></p>
+    <ul>
+      <li>This extension does not collect or transmit any personally identifiable information to external servers.</li>
+      <li>All data is processed locally in your browser.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p><strong>Data usage</strong></p>
+    <ul>
+      <li>The extension stores a small dictionary and a bundled meanings map in <code>chrome.storage.local</code> to provide quick definitions and suggestions. This data is bundled with the extension and may be persisted in local storage for offline use.</li>
+      <li>No telemetry, analytics, or external network calls are made by default that would send user data off-device. The extension may fetch packaged resources (bundled JSON files) from its own package to initialize local storage.</li>
+      <li><strong>On-demand definition lookups:</strong> The extension may make optional, user-initiated requests to external services (for example, Wiktionary) when you ask it to look up a definition. These requests are made only as a result of explicit user actions (clicking a word/lookup button) and are not sent automatically or without consent.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p><strong>Permissions and what they’re used for</strong></p>
+    <ul>
+      <li><code>activeTab</code>: read the Wordle board and insert the helper UI when the user activates the extension on a supported page.</li>
+      <li><code>scripting</code>: inject the helper UI and scripts into matched pages when needed.</li>
+      <li><code>clipboardWrite</code>: allow explicit user-initiated copy actions (e.g., "copy suggestion").</li>
+      <li><code>storage</code>: persist user preferences and local caches (wordlists, UI settings) for faster, offline-friendly operation.</li>
+      <li><code>alarms</code>: optional local housekeeping tasks like cache refreshes (user-controlled).</li>
+    </ul>
+  </section>
+
+  <section>
+    <p><strong>Support and contact</strong></p>
+    <p>For questions or to request data removal, open an issue in the <a href="https://github.com/ashwin/Wordle-Solver">project repository</a> or email: (provide your support email here).</p>
+  </section>
+
+  <section>
+    <p><strong>Note about trademarks</strong></p>
+    <p>This project is an unofficial helper for Wordle-style games and is not affiliated with nor endorsed by their respective owners.</p>
+  </section>
+
+  <footer>
+    <small>Privacy policy generated from <code>privacy.md</code> in the repository. Page created for Chrome Web Store requirements.</small>
+  </footer>
+</body>
+</html>

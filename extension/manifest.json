@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Wordle Wizard (Unofficial)",
+  "short_name": "Wordle Wizard",
+  "description": "Unofficial helper for Wordle-style games: auto-detects hard-mode tiles and suggests optimal next guesses.",
+  "version": "0.2.0",
+  "homepage_url": "https://github.com/ashwin/Wordle-Solver",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://www.nytimes.com/games/*",
+    "https://www.nytimes.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/games/*"],
+      "js": ["extension/meanings_blob_full.js","content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["words.txt", "ui.css", "extension/words_meanings.json", "words_meanings.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

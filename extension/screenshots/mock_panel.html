@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wordle Wizard Screenshot Mock</title>
+  <style>
+    /* Lightweight mock styling inspired by extension/ui.css for screenshot purposes */
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#f4f6f8; height:100vh; display:flex; align-items:center; justify-content:center; }
+    #wordle-helper-panel { width: 720px; max-width:90%; background: #fff; padding: 18px; border-radius:12px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); color:#111; }
+    .wh-header{ display:flex; align-items:center; justify-content:space-between; }
+    h3{ margin:0; font-size:20px; color:#0b66b2 }
+    .status{ color:#666; font-size:13px }
+    .top-suggestion{ display:flex; gap:18px; align-items:center; margin-top:12px }
+    .suggestion{ font-weight:800; font-size:48px; padding:12px 18px; border-radius:12px; background:linear-gradient(180deg,#fff,#f6fbff); box-shadow:0 4px 18px rgba(11,102,178,0.06); }
+    .meaning{ font-size:15px; color:#333; max-width:420px }
+    .hint-chip{ display:inline-block; margin-top:10px; background:#f6fbff; color:#0b66b2; padding:6px 10px; border-radius:999px; font-weight:700 }
+    .winning{ margin-top:12px; font-size:14px; color:#0b66b2; font-weight:700 }
+    .sample-tiles{ display:flex; gap:8px; margin-top:14px }
+    .wh-tile{ width:48px; height:48px; display:flex; align-items:center; justify-content:center; font-weight:800; color:white; border-radius:8px; background:#3a3a3a; font-size:18px }
+    .wh-tile.wh-g{ background:#6aaa64 }
+    .wh-tile.wh-y{ background:#c9b458; color:#111 }
+    .footer{ margin-top:18px; color:#777; font-size:12px }
+  </style>
+</head>
+<body>
+  <div id="wordle-helper-panel">
+    <div class="wh-header">
+      <h3>Wordle Wizard</h3>
+      <div class="status">Detected attempts: <strong id="att">0</strong></div>
+    </div>
+
+    <div id="top" class="top-suggestion">
+      <div class="suggestion" id="word">SCRAP</div>
+      <div>
+        <div class="meaning" id="meaning">a small fragment of something broken off from the whole</div>
+        <div id="extra" class="hint-chip">Try this as a start</div>
+        <div id="win" class="winning" style="display:none">You won in 4 guesses 🎉</div>
+      </div>
+    </div>
+
+    <div class="sample-tiles" id="tiles" style="display:none">
+      <div class="wh-tile wh-b">S</div>
+      <div class="wh-tile wh-y">C</div>
+      <div class="wh-tile wh-g">R</div>
+      <div class="wh-tile wh-b">A</div>
+      <div class="wh-tile wh-b">P</div>
+    </div>
+
+    <div class="footer">Top suggested word among <strong id="count">4278</strong> possible words</div>
+  </div>
+
+  <script>
+    // Render different states based on ?state= query
+    (function(){
+      const params = new URLSearchParams(location.search);
+      const state = params.get('state') || 'default';
+      const att = document.getElementById('att');
+      const win = document.getElementById('win');
+      const tiles = document.getElementById('tiles');
+      const extra = document.getElementById('extra');
+      const meaning = document.getElementById('meaning');
+
+      if (state === 'first') {
+        att.textContent = '0';
+        extra.style.display = 'inline-block';
+        meaning.textContent = 'Awaiting your first try — no hints shown.';
+      } else if (state === 'meaning') {
+        att.textContent = '0';
+        extra.style.display = 'none';
+        meaning.textContent = 'a small fragment of something broken off from the whole';
+      } else if (state === 'validated') {
+        att.textContent = '1';
+        tiles.style.display = 'flex';
+        extra.style.display = 'none';
+      } else if (state === 'win') {
+        att.textContent = '4';
+        win.style.display = 'block';
+        tiles.style.display = 'flex';
+      } else {
+        // default: compact top suggestion
+        att.textContent = '0';
+      }
+    })();
+  </script>
+</body>
+</html>

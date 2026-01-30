@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b66b2"/>
+      <stop offset="1" stop-color="#4aa3e0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" rx="18" fill="url(#bg)" />
+
+  <!-- Crown -->
+  <g transform="translate(40,8)" fill="#f2c94c" stroke="#b88919" stroke-width="1">
+    <path d="M0,18 L6,6 L18,18 L28,6 L36,18 L40,18 L40,28 L0,28 Z"/>
+  </g>
+
+  <!-- Shield -->
+  <g transform="translate(24,30)">
+    <!-- shield outer shape -->
+    <path d="M40 0 L72 12 L72 44 C72 70 56 80 40 92 C24 80 8 70 8 44 L8 12 Z" fill="#2f8bd6" stroke="#1b5f90" stroke-width="2"/>
+
+    <!-- split panels -->
+    <path d="M40 0 L40 0 L40 12 L40 44 C40 65 46 77 40 86 C34 77 40 65 40 44 L40 12 Z" fill="#e9573f" opacity="1"/>
+
+    <!-- small inner squares to suggest segmentation -->
+    <rect x="18" y="16" width="12" height="12" rx="2" fill="#ffffff" opacity="0.12" />
+    <rect x="42" y="16" width="10" height="10" rx="2" fill="#ffffff" opacity="0.06" />
+    <rect x="30" y="34" width="28" height="10" rx="2" fill="#ffffff" opacity="0.06" />
+  </g>
+
+  <!-- Small circular badge with W -->
+  <g transform="translate(84,78)">
+    <circle cx="16" cy="16" r="16" fill="#ffffff" />
+    <text x="16" y="19" font-family="Verdana, Arial, sans-serif" font-weight="800" font-size="16" fill="#0b66b2" text-anchor="middle">W</text>
+  </g>
+</svg>
