@@ -1,14 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Wordle Wizard (Unofficial)",
+  "name": "Wordle Wizard",
   "short_name": "Wordle Wizard",
   "description": "Unofficial helper for Wordle-style games: auto-detects hard-mode tiles and suggests optimal next guesses.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage_url": "https://github.com/ashwin/Wordle-Solver",
   "permissions": [
     "storage",
     "activeTab",
-    "scripting",
     "clipboardWrite",
     "alarms"
   ],
