@@ -8,6 +8,6 @@ Validation performed:
 - Ran a manifest reference validator to ensure all files referenced in manifests are present.
 - Generated mock screenshots and manually verified content scripts load without 404s when tested locally.
 
-Please re-review the updated package (version 0.2.1). If any further detail is required for your review process, I can provide logs or run additional checks.
+Please re-review the updated package (version 0.2.2). If any further detail is required for your review process, I can provide logs or run additional checks.
 
 — Developer
