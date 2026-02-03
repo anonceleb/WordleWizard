@@ -11,7 +11,8 @@ Required assets & metadata
 - Contact email for developer account.
 
 Permissions review & manifest
-- Minimize the permissions requested in `manifest.json` (only request `storage`, `activeTab`, `scripting`, `clipboardWrite`, and explicit host permissions if needed).
+- Minimize the permissions requested in `manifest.json` (only request `storage`, `scripting`, `clipboardWrite`, and explicit host permissions if needed — request `activeTab` only if you use it at runtime).
+- Run `scripts/validate_manifest_refs.py` against your `manifest.json` or build manifest before packaging to ensure every referenced file is present in the package.
 - Make sure `host_permissions` contains only domains required for the extension to run and document why each host permission is needed in `PUBLISHING.md`.
 - We recommend including “(Unofficial)” in the extension title to reduce trademark risks when referring to Wordle or other trademarked games.
 - If you want to protect intellectual property, consider using the provided build step (`scripts/build_extension.sh`) to minify/obfuscate the client-side JS. Understand that obfuscation only raises the barrier; for true secrecy move sensitive logic server-side and document privacy implications.

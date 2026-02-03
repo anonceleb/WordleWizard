@@ -7,7 +7,6 @@
   "homepage_url": "https://github.com/ashwin/Wordle-Solver",
   "permissions": [
     "storage",
-    "activeTab",
     "clipboardWrite",
     "alarms"
   ],
@@ -40,7 +39,6 @@
       "resources": [
         "words.txt",
         "ui.css",
-        "extension/words_meanings.json",
         "words_meanings.json"
       ],
       "matches": [

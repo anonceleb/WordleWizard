@@ -39,8 +39,7 @@
   <section>
     <p><strong>Permissions and what they’re used for</strong></p>
     <ul>
-      <li><code>activeTab</code>: read the Wordle board and insert the helper UI when the user activates the extension on a supported page.</li>
-      <li><code>scripting</code>: inject the helper UI and scripts into matched pages when needed.</li>
+      <li><code>scripting</code>: inject the helper UI and scripts into matched pages; content scripts run on the declared host pages via manifest host permissions.</li>
       <li><code>clipboardWrite</code>: allow explicit user-initiated copy actions (e.g., "copy suggestion").</li>
       <li><code>storage</code>: persist user preferences and local caches (wordlists, UI settings) for faster, offline-friendly operation.</li>
       <li><code>alarms</code>: optional local housekeeping tasks like cache refreshes (user-controlled).</li>

@@ -7,7 +7,6 @@
   "homepage_url": "https://github.com/ashwin/Wordle-Solver", 
   "permissions": [
     "storage",
-    "activeTab",
     "clipboardWrite",
     "alarms"
   ],
@@ -24,13 +23,13 @@
   "content_scripts": [
     {
       "matches": ["https://www.nytimes.com/games/*"],
-      "js": ["extension/meanings_blob_full.js","content_script.js"],
+      "js": ["meanings_blob_full.js","content_script.js"],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["words.txt", "ui.css", "extension/words_meanings.json", "words_meanings.json"],
+      "resources": ["words.txt", "ui.css", "words_meanings.json"],
       "matches": ["<all_urls>"]
     }
   ]
