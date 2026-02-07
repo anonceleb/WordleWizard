@@ -1,0 +1,24 @@
+name: Pre-publish checks
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  check-build-icons:
+    name: Validate build icons and manifest refs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Run build-icons checks
+        run: |
+          python3 scripts/ci/check_build_icons.py --build-dir extension/build --manifest extension/manifest.json
