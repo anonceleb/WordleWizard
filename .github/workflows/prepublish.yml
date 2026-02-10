@@ -19,6 +19,7 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Run build-icons checks
+      - name: Run build artifact checks
         run: |
-          python3 scripts/ci/check_build_icons.py --build-dir extension/build --manifest extension/manifest.json
+          # Validate the files referenced by the *build* manifest are present in extension/build
+          python3 scripts/ci/check_build_icons.py --build-dir extension/build --manifest extension/build/manifest.json

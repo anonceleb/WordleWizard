@@ -10,7 +10,9 @@ TERSER_CMD="npx terser"
 OBF_CMD="npx javascript-obfuscator"
 
 # Files to process (relative to extension/)
-JS_FILES=("content_script.js" "solver.js" "background.js")
+# Include `meanings_blob_full.js` so the big generated blob that the manifest references
+# is present in the build and is obfuscated/minified like other scripts.
+JS_FILES=("meanings_blob_full.js" "content_script.js" "solver.js" "background.js")
 
 # Quick check for required tools
 if ! command -v node >/dev/null 2>&1; then
